@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ketahanan Pangan Indonesia</title>
+
+    <style>
+        /* Mengatur tampilan dasar halaman */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f1e6;
+            color: #263d2b;
+            line-height: 1.7;
+        }
+
+        /* Bagian judul website */
+        header {
+            background: linear-gradient(135deg, #245c38, #4d8b52);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        /* Mengatur konten utama */
+        main {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        /* Desain setiap kotak konten */
+        .card {
+            background-color: #fffdf6;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+        }
+
+        h2 {
+            color: #28613b;
+            margin-bottom: 15px;
+        }
+
+        /* Daftar tips */
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        /* Tombol interaktif */
+        button {
+            background-color: #347747;
+            color: white;
+            border: none;
+            padding: 13px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #204f30;
+            transform: translateY(-2px);
+        }
+
+        /* Tempat menampilkan tips tambahan */
+        #tipsTambahan {
+            margin-top: 18px;
+            padding: 15px;
+            background-color: #e6f0df;
+            border-radius: 10px;
+            color: #245c38;
+            font-weight: bold;
+            min-height: 55px;
+        }
+
+        /* Bagian footer */
+        footer {
+            background-color: #245c38;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Membuat website responsif di HP */
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bagian header atau judul website -->
+    <header>
+        <h1>🌱 Ketahanan Pangan Indonesia</h1>
+        <p>Mulai dari diri sendiri untuk masa depan yang lebih baik!</p>
+    </header>
+
+    <!-- Bagian konten utama -->
+    <main>
+
+        <!-- Penjelasan singkat -->
+        <section class="card">
+            <h2>🌾 Apa Itu Ketahanan Pangan?</h2>
+
+            <p>
+                Ketahanan pangan adalah kondisi ketika setiap orang
+                memiliki akses terhadap makanan yang cukup, aman,
+                bergizi, dan terjangkau untuk memenuhi kebutuhan
+                hidupnya. Ketahanan pangan penting untuk menciptakan
+                masyarakat yang sehat dan masa depan yang sejahtera.
+            </p>
+        </section>
+
+        <!-- Tiga tips menjaga ketahanan pangan -->
+        <section class="card">
+            <h2>💚 3 Tips Menjaga Ketahanan Pangan</h2>
+
+            <ul>
+                <li>
+                    <strong>Kurangi pemborosan makanan.</strong>
+                    Ambil makanan secukupnya dan habiskan makanan
+                    yang sudah diambil.
+                </li>
+
+                <li>
+                    <strong>Manfaatkan lahan untuk bercocok tanam.</strong>
+                    Tanam sayuran atau tanaman pangan di halaman
+                    rumah maupun sekolah.
+                </li>
+
+                <li>
+                    <strong>Dukung produk pangan lokal.</strong>
+                    Belilah hasil pertanian petani lokal untuk
+                    membantu meningkatkan perekonomian masyarakat.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Bagian interaktif menggunakan JavaScript -->
+        <section class="card">
+            <h2>💡 Tahukah Kamu?</h2>
+
+            <p>
+                Klik tombol di bawah untuk mendapatkan fakta
+                dan tips menarik seputar ketahanan pangan!
+            </p>
+
+            <button onclick="tampilkanTips()">
+                Tahukah kamu?
+            </button>
+
+            <!-- Hasil tips akan muncul di sini -->
+            <div id="tipsTambahan">
+                Tips menarik akan muncul di sini. Yuk, klik tombolnya!
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bagian penutup website -->
+    <footer>
+        <p>🌱 Belajar Hari Ini, Menjaga Pangan untuk Masa Depan.</p>
+        <p>Website Edukasi Ketahanan Pangan | Workshop Kelas 12</p>
+    </footer>
+
+    <script>
+        // Kumpulan fakta dan tips tambahan
+        const daftarTips = [
+            "Tahukah kamu? Menanam cabai, tomat, dan kangkung di rumah dapat membantu memenuhi kebutuhan pangan keluarga.",
+
+            "Tahukah kamu? Mengolah sisa makanan menjadi kompos dapat membantu menyuburkan tanah.",
+
+            "Tahukah kamu? Mengonsumsi makanan lokal dapat membantu petani dan produsen pangan di sekitar kita.",
+
+            "Tahukah kamu? Menyimpan makanan dengan cara yang benar dapat membuatnya lebih awet dan mengurangi sampah makanan.",
+
+            "Tahukah kamu? Diversifikasi pangan berarti mengonsumsi berbagai sumber makanan, tidak hanya bergantung pada beras.",
+
+            "Tahukah kamu? Membuat kebun sekolah bisa menjadi cara menyenangkan untuk belajar tentang pertanian."
+        ];
+
+        // Menyimpan indeks tips yang terakhir ditampilkan
+        let tipsTerakhir = -1;
+
+        // Fungsi yang dijalankan ketika tombol diklik
+        function tampilkanTips() {
+
+            let nomorAcak;
+
+            // Memilih tips secara acak tanpa mengulang
+            // tips yang baru saja ditampilkan
+            do {
+                nomorAcak = Math.floor(
+                    Math.random() * daftarTips.length
+                );
+            } while (nomorAcak === tipsTerakhir);
+
+            // Menyimpan pilihan terbaru
+            tipsTerakhir = nomorAcak;
+
+            // Menampilkan tips pada halaman website
+            document.getElementById("tipsTambahan").innerText =
+                daftarTips[nomorAcak];
+        }
+    </script>
+
+</body>
+</html>
